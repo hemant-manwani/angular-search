@@ -1,0 +1,68 @@
+﻿body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.nomargin {
+  margin: 0px !important;
+}
+.nopadding {
+  padding: 0px !important;
+}
+small {
+  font-size: 70%;
+}
+.searchBox {
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  border: 1px solid #e6e8ea;
+  z-index: 9999;
+}
+.searchBox .header {
+  height: 40px;
+  padding: 10px 15px;
+  z-index: 9999;
+}
+.searchBox .search {
+  padding: 5px;
+  display: none;
+  z-index: 9999;
+}
+.searchBox .dropdown {
+  border: 1px solid #e6e8ea;
+  left: 0;
+  list-style: outside none none;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.searchBox.active .search {
+  display: inherit;
+}
+
+.searchBox.active .dropdown {
+  display: inherit;
+  max-height: 290px;
+}
+
+.searchBox .dropdown li {
+  margin: 10px 0 0;
+  padding: 0 10px;
+}
+
+.searchBox .dropdown li i {
+  color: inherit;
+  margin-right: 5px;
+  vertical-align: middle;
+  float: right;
+}
+
+.searchBox .dropdown li small {
+  margin-right: 10px;
+}

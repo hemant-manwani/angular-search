@@ -1,0 +1,24 @@
+﻿<div class="searchBox" ng-class="{ active: showResult }">
+  <div class="header" ng-click="show()">
+    <b>{{selectedItem[key]}}</b>
+    <span class="pull-right glyphicon" ng:class="{true:'glyphicon-chevron-up', false:'glyphicon-chevron-down'}[showResult]"></span>
+  </div>
+  <div class="search">
+    <div class="input-group">
+      <input type="text" ng-model="searchKey" class="form-control" placeholder="Search for..." ng-change="search(searchKey)">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+      </span>
+    </div><!-- /input-group -->
+    <div class="text-right nomargin nopadding"><small>Showing records 1 to {{values.length}} of {{totalRecords}}</small></div>
+  </div>
+  <ul class="dropdown">
+    <li ng-repeat="item in values" ng-click="selectItem(item)" ng-if="values.length > 0">
+      <span>{{item[key]}}</span>
+      <i class="glyphicon glyphicon-ok" ng-show="isActive(item)"></i>
+    </li>
+    <li ng-if="values.length == 0">
+      No Records
+    </li>
+  </ul>
+</div>
